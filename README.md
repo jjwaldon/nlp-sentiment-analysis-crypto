@@ -24,7 +24,7 @@ path = r"INSERT PATH HERE"
 2. Run the Python script using the following command:
 
 ```bash
-python sentiment_analysis.py
+python project.py
 ```
 
 3. Run the script, depending on your hardware this can take a moment.
