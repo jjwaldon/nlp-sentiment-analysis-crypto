@@ -66,3 +66,35 @@ def setSentiment(score):
         return "positive"
     
 path['sentiment'] = path['polarity'].apply(setSentiment)
+
+
+plt.figure(figsize=(10,10))
+
+for b in range(0, 1000):
+    plt.scatter(path["polarity"].iloc[[b]].values[0], path["subjectivity"].iloc[[b]].values[0], color="slategray")
+
+plt.title("Sentiment Analysis Scatter Chart")
+plt.xlabel('polarity')
+plt.ylabel('subjectivity')
+plt.show()
+
+
+fig = plt.figure(figsize=(6,6))
+colors = ("yellowgreen", "yellow", "red")
+wp = {'linewidth':2, 'edgecolor':"black"}
+tags = path['sentiment'].value_counts()
+tags.plot(kind='pie', autopct='%1.1f%%', shadow=True, colors = colors,
+         startangle=90, wedgeprops = wp, label='')
+plt.title('Sentiment Split Pie Chart')
+
+
+zig = plt.figure(figsize=(6,6))
+path['sentiment'].value_counts().plot(kind="bar", color=['green','gold','red'])
+plt.title("Sentiment Split Pie Chart")
+plt.xlabel("polarity")
+plt.ylabel("subjectivity")
+plt.show()
+
+
+chart = path['sentiment'].value_counts().to_frame('Number of Tweets').reset_index()
+print(chart)
