@@ -35,7 +35,7 @@ python project.py
 - The Python script processes the Twitter data, cleans the tweets, and performs sentiment analysis.
 - Cleaned tweets are analyzed for subjectivity and polarity to determine sentiment.
 - Results are visualized using scatter plots, pie charts, and bar charts.
-- 
+  
 ![Figure_1](https://github.com/Dviqel/nlp-sentiment-analysis-crypto/assets/147337604/54d2f188-3c31-45c8-9d30-4b2b079c0b58)
 
 ![Figure_2](https://github.com/Dviqel/nlp-sentiment-analysis-crypto/assets/147337604/303bca08-cfc7-43ae-80c1-88b1d2306d37)
